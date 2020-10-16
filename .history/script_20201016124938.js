@@ -11,4 +11,3 @@ var submitButton = document.querySelector("#submit");
 var tipAmountEl = document.querySelector("#tip-amount");
 var newTotalEl = docuement.querySelector("#new-total");
 
-

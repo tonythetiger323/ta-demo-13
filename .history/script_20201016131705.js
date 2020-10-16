@@ -1,3 +1,6 @@
+//TODO create event listener to calculate tip on button
+// TODO render tip amount and total price with tip included to DOM
+
 // BONUS
 //TODO split bill for multiple people
 
@@ -32,8 +35,9 @@ submitButton.addEventListener("click", function(event) {
         console.log(tipAmount);
 
     // write the tip amount to the DOM
-        tipAmountEl.textContent = tipAmount.toFixed(2);
-    // calculate the final total of bill with tip included and write to DOM
-        newTotalEl.textContent = finalTotal(subtotalValue, tipAmount).toFixed(2);
+        tipAmountEl.textContent = tipAmount;
+    // TODO calculate the final total of bill with tip included
+        newTotalEl.textContent = finalTotal(subtotalValue, tipAmount)
+    // TODO write the final total to the DOM
     
 });

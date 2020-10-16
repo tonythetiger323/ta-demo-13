@@ -9,7 +9,6 @@ var tipAmountEl = document.querySelector("#tip-amount");
 var newTotalEl = document.querySelector("#new-total");
 var peopleInput = document.querySelector("#people");
 var divideButton = document.querySelector("#divideButton");
-var totalPerPersonEl = document.querySelector("#total-person");
 
 // initialize totalWithTip variable for scoping purposes
 var totalWithTip;
@@ -59,7 +58,9 @@ divideButton.addEventListener("click", function(event) {
     // console.log to see if input was received - delete when done
     console.log(peopleValue, totalWithTip);
     // divide total with tip by number of people
-    var totalPerPerson = divideBill(totalWithTip, peopleValue);
+    var totalPerPerson = divideBill(peopleValue, totalWithTip);
     // write total per Person to the DOM
-    totalPerPersonEl.textContent = totalPerPerson;
+
+
+
 })

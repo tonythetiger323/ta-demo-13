@@ -9,10 +9,6 @@ var tipAmountEl = document.querySelector("#tip-amount");
 var newTotalEl = document.querySelector("#new-total");
 var peopleInput = document.querySelector("#people");
 var divideButton = document.querySelector("#divideButton");
-var totalPerPersonEl = document.querySelector("#total-person");
-
-// initialize totalWithTip variable for scoping purposes
-var totalWithTip;
 // create function to calculate tip amount
 function calculateTip(subtotalAmount, tipPercent) {
     return subtotalAmount * (tipPercent/100);
@@ -45,7 +41,7 @@ submitButton.addEventListener("click", function(event) {
     // write the tip amount to the DOM
         tipAmountEl.textContent = tipAmount.toFixed(2);
     // calculate the final total of bill with tip included and write to DOM
-        totalWithTip = finalTotal(subtotalValue, tipAmount).toFixed(2);
+        var totalWithTip = finalTotal(subtotalValue, tipAmount).toFixed(2);
         newTotalEl.textContent = totalWithTip;
     
 });
@@ -57,9 +53,9 @@ divideButton.addEventListener("click", function(event) {
     // get value from input field
     var peopleValue = peopleInput.value;
     // console.log to see if input was received - delete when done
-    console.log(peopleValue, totalWithTip);
+    console.log(peopleValue)
     // divide total with tip by number of people
-    var totalPerPerson = divideBill(totalWithTip, peopleValue);
-    // write total per Person to the DOM
-    totalPerPersonEl.textContent = totalPerPerson;
+    var totalPerPerson = divideBill(peopleValue, )
+
+
 })

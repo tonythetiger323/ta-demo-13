@@ -19,12 +19,6 @@ function finalTotal(subtotalAmount, tipAmount) {
     return subtotalAmount + tipAmount;
 }
 
-// create function to divide bill
-function divideBill(totalTip, numPeople) {
-    return (totalTip/numPeople).toFixed(2);
-}
-
-
 // event listener for when the Calculate Tip Button is clicked
 submitButton.addEventListener("click", function(event) {
     event.preventDefault();
@@ -47,12 +41,3 @@ submitButton.addEventListener("click", function(event) {
 
 
 // TODO event listener for when Divide Bill button is clicked
-divideButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    // get value from input field
-    var peopleValue = peopleInput.value;
-    // console.log to see if input was received - delete when done
-    console.log(peopleValue)
-
-
-})

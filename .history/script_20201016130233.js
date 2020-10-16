@@ -9,30 +9,25 @@ var subtotalInput = document.querySelector("#subtotal");
 var tipPercentageInput = document.querySelector("#tip-percentage");
 var submitButton = document.querySelector("#submit");
 var tipAmountEl = document.querySelector("#tip-amount");
-var newTotalEl = document.querySelector("#new-total");
+var newTotalEl = docuement.querySelector("#new-total");
 
 // create function to calculate tip amount
-function calculateTip(subtotalAmount, tipPercent) {
-    return subtotalAmount * (tipPercent/100);
+function calculateTip(subtotal, tipPercent) {
+    return subtotal * (tipPercent/100);
 }
 
 // event listener for when the Calculate Tip Button is clicked
 submitButton.addEventListener("click", function(event) {
     event.preventDefault();
-    // get values from input fields
-        var subtotalValue = +subtotalInput.value.trim();
-        var tipPercentageValue = +tipPercentageInput.value.trim();
-    // console.log to see if input was received - delete when complete       
-        console.log(subtotalValue, tipPercentageValue)
-    // calculate the tip amount
-        var tipAmount = calculateTip(subtotalValue, tipPercentageValue);
-    // console.log to see if tip amount was calculated - delete when complete
-        console.log(tipAmount);
+    // Tget values from input fields
+        var subtotal = +subtotalInput.value().trim();
+        var tipPercentage = +tipPercentageInput.value().trim();
+    // TODO calculate the tip amount
 
     // TODO write the tip amount to the DOM
-        tipAmountEl.textContent = tipAmount;
+
     // TODO calculate the final total of bill with tip included
-        
+
     // TODO write the final total to the DOM
     
-});
+}

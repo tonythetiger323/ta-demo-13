@@ -20,8 +20,8 @@ function calculateTip(subtotalAmount, tipPercent) {
 submitButton.addEventListener("click", function(event) {
     event.preventDefault();
     // get values from input fields
-        var subtotalValue = +subtotalInput.value.trim();
-        var tipPercentageValue = +tipPercentageInput.value.trim();
+        var subtotalValue = +subtotalInput.value().trim();
+        var tipPercentageValue = +tipPercentageInput.value().trim();
     // console.log to see if input was received - delete when complete       
         console.log(subtotalValue, tipPercentageValue)
     // calculate the tip amount
